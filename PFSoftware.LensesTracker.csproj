@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Views\ContactLens.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LensesTracker.sqlite" />
+    <None Remove="Views\ContactLens.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="LensesTracker.sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Extensions\PFSoftware.Extensions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\ContactLens.ico" />
+  </ItemGroup>
+
+</Project>
