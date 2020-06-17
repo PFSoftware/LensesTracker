@@ -12,7 +12,6 @@ namespace PFSoftware.LensesTracker.Views
     /// <summary>Interaction logic for MainPage.xaml</summary>
     public partial class LensesPage
     {
-        private bool _loaded;
         private ListViewSort _sort = new ListViewSort();
         private Contact _selectedContact = new Contact();
 
@@ -102,10 +101,10 @@ namespace PFSoftware.LensesTracker.Views
 
         private async void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            if (!_loaded)
+            if (!AppState.Loaded)
             {
                 await AppState.FileManagement();
-                _loaded = true;
+                AppState.Loaded = true;
             }
 
             RefreshItemsSource();

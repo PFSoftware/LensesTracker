@@ -14,6 +14,7 @@ namespace PFSoftware.LensesTracker.Models
     {
         public static readonly SQLiteDatabaseInteraction DatabaseInteraction = new SQLiteDatabaseInteraction();
         internal static List<Contact> AllContacts = new List<Contact>();
+        public static bool Loaded = false;
 
         #region Navigation
 
